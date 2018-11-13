@@ -1,0 +1,56 @@
+{
+  "name": "reservation_hour",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Si Yong Kim",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start": "nodemon server/app.js",
+    "db": "mysql -u root -p < server/schema.sql",
+    "seed": "node server/database/seed.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "moment": "^2.22.2",
+    "mysql": "^2.16.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-bridge": "^1.12.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-airbnb": "^3.0.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1",
+    "webpack": "^4.23.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  }
+}

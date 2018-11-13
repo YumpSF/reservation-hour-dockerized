@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  reservation-hour:
+    build: reservation-hour/
+    ports:
+      - '5882:5882'
+    command: ['./wait-for-it.sh', 'database:3306', '--', 'node', './server/app.js'] 
+    links:
+      - database
+
+  database:
+    build: database/
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
